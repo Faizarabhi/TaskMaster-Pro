@@ -1,6 +1,8 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
+import Home from '../features/Home.jsx';
 import Login from '../features/auth/Login.jsx';
+import Register from '../features/auth/Register.jsx';
 import Dashboard from '../features/dashboard/Dashboard.jsx';
 import AuthLayout from '../layouts/AuthLayout.jsx';
 import MainLayout from '../layouts/MainLayout.jsx';
@@ -10,10 +12,10 @@ export default function AppRoutes() {
   return (
     <Routes>
       <Route element={<AuthLayout />}>
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Route>
-
-      {/* Routes privées */}
       <Route
         element={
           <PrivateRoute>
@@ -24,7 +26,7 @@ export default function AppRoutes() {
         <Route path="/dashboard" element={<Dashboard />} />
       </Route>
 
-      <Route path="*" element={<Navigate to="/login" replace />} />
+      <Route path="/login" element={<Navigate to="/login" replace />} />
     </Routes>
   );
 }
