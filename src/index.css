@@ -2,13 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-
+/* Light Mode */
 :root {
-  --color-primary: #ffffff; /* light mode */
-  --text-primary: #000000;
+  --color-primary:   #F5F5DC;   /* bg rose */
+  --color-secondary: #FAF0E6;
+  --text-primary: #3276ff;    /* texte violet */
+  --text-secondary: #333333;
 }
 
+/* Dark Mode */
 .dark {
-  --color-primary: #000000; /* dark mode */
-  --text-primary: #ffffff;
+  --color-primary:#327;   
+  --color-secondary: #D1E1FF;
+  --text-primary:  #3276ff;    /* texte jaune */
+  --text-secondary: #3276ff;
+}
+
+/* Utilitaires Tailwind */
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+.text-primary {
+  color: var(--text-primary);
+}
+.text-secondary {
+  color: var(--text-secondary);
 }

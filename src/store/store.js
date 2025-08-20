@@ -1,17 +1,17 @@
-import { configureStore } from '@reduxjs/toolkit';
-import authReducer from '../features/auth/authSlice';
-/* import dashboardReducer from '../features/dashboard/dashboardSlice';
-import projectReducer from '../features/projects/ProjectSlice';
-import taskReducer from '../features/tasks/TaskSlice';
- */
+import { configureStore } from "@reduxjs/toolkit";
+import authReducer from "../features/auth/authSlice";
+/* import projectReducer from "../features/projects/projectSlice";
+import taskReducer from "../features/tasks/taskSlice"; */
+import dashboardReducer from "../features/dashboard/dashboardSlice";
+import uiReducer from "../features/ui/uiSlice";
 
 export const store = configureStore({
   reducer: {
     auth: authReducer,
-   
+    dashboard: dashboardReducer,
+    ui: uiReducer,
+ 
   },
 });
-/*  dashboard: dashboardReducer,
-    projects: projectReducer,
-    tasks: taskReducer, */
-export default store;
+
+

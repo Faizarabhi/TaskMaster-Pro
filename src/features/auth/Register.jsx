@@ -2,7 +2,7 @@ import React from 'react'
 
 function Register() {
   return (
-    <div>Register</div>
+    <div className='text-primary text-2xl'>Register</div>
   )
 }
 
